@@ -25,3 +25,5 @@ go.work
 *.swo
 *~
 .DS_Store
+
+.env
