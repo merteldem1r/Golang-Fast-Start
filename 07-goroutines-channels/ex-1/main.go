@@ -33,7 +33,7 @@ func main() {
 	// Create a WaitGroup — a counter that tracks how many goroutines are still running
 	var wg sync.WaitGroup
 
-	// Tell the WaitGroup: "2 goroutines will be working"
+	// Tell the WaitGroup: "2 goroutines will be working" and 2 of them will call Done()
 	wg.Add(2)
 
 	// Launch goroutine A — starts immediately in the background, doesn't block main
