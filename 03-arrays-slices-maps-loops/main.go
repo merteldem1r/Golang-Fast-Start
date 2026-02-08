@@ -113,7 +113,7 @@ func main() {
 		i++
 	}
 
-	// ------- TEST (setting capacity of a slice)
+	// ------- TEST (setting capacity of a slice and without setting capacity):
 	var n int = 1000000
 	var withoutCap = []int{}
 	var withCap = make([]int, 0, n)
@@ -124,7 +124,7 @@ func main() {
 
 func timeLoop(slice []int, n int) time.Duration {
 	start := time.Now()
-	for i := 0; i < n; i++ {
+	for i := range n {
 		slice = append(slice, i)
 	}
 	return time.Since(start)
